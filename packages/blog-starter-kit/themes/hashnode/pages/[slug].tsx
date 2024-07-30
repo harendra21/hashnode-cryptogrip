@@ -82,6 +82,22 @@ const Post = ({ publication, post, morePosts }: PostProps) => {
 					}}
 				/>
 				<style dangerouslySetInnerHTML={{ __html: highlightJsMonokaiTheme }}></style>
+				<script
+					type="text/javascript"
+					dangerouslySetInnerHTML={{
+						__html: `
+  var _paq = window._paq = window._paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://analytics.with-code-examples.online/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '7']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();`,
+					}}
+				/>
 			</Head>
 			<PostHeader post={post} morePosts={morePosts} />
 		</>
