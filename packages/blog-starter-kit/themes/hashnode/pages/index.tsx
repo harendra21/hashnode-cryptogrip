@@ -68,8 +68,8 @@ export default function Index(
 	const postsToBeRendered = {
 		edges: pinnedPost
 			? [{ node: pinnedPost, cursor: `${pinnedPost.id}_${pinnedPost.publishedAt}` }].concat(
-					posts.edges,
-			  )
+				posts.edges,
+			)
 			: posts.edges,
 		pageInfo: posts.pageInfo,
 	};
@@ -93,6 +93,7 @@ export default function Index(
 		<AppProvider publication={publication}>
 			<Layout>
 				<Head>
+
 					<title>
 						{publication.displayTitle || publication.title || 'Hashnode Blog Starter Kit'}
 					</title>
@@ -127,6 +128,22 @@ export default function Index(
 							__html: JSON.stringify(addPublicationJsonLd(publication)),
 						}}
 					/>
+
+					<script>
+						var _paq = window._paq = window._paq || [];
+						/* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+						_paq.push(['trackPageView']);
+						_paq.push(['enableLinkTracking']);
+						(function() {
+						var u="https://analytics.with-code-examples.online/";
+						_paq.push(['setTrackerUrl', u+'matomo.php']);
+						_paq.push(['setSiteId', '7']);
+						var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+						g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+					})();
+					</script>
+
+
 				</Head>
 				<Header isHome={true} />
 				<div>
