@@ -46,10 +46,10 @@ const CustomLogo = ({
   const blogTitle = generateBlogTitleWithoutDisplayTitle(publication);
 
   return (
-    <h1 className="blog-main-logo">
+    <h2 className="blog-main-logo">
       <Link
         className={twJoin(
-          'blog-logo focus-ring-base flex flex-row items-center','focus-ring-colors-base',
+          'blog-logo focus-ring-base flex flex-row items-center', 'focus-ring-colors-base',
           logoSizes[size],
         )}
         aria-label={`${blogTitle} home page`}
@@ -65,7 +65,7 @@ const CustomLogo = ({
           alt={blogTitle}
         />
       </Link>
-    </h1>
+    </h2>
   );
 };
 
@@ -91,13 +91,13 @@ const DefaultLogo = ({
       className={twJoin(
         'blog-title',
         textStyles[size],
-        'break-words font-heading font-semibold leading-snug md:font-bold','dark:text-white',
+        'break-words font-heading font-semibold leading-snug md:font-bold', 'dark:text-white',
       )}
     >
       <Link
         href={`/${isPostPage ? '?source=top_nav_blog_home' : ''}`}
         className={twJoin(
-          'focus-ring-base flex flex-row items-center','focus-ring-colors-base',
+          'focus-ring-base flex flex-row items-center', 'focus-ring-colors-base',
         )}
         aria-label={`${blogTitle} home page`}
       >
