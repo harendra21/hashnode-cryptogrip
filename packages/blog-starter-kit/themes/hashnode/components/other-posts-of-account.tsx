@@ -68,41 +68,41 @@ function OtherPostsOfAccount(props: Props) {
             </a>
           )}
           <div className="blog-post-details break-words">
-            <2 className="mb-2 font-heading text-2xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">
-            <a href={postURL}>
-              {post.title.substring(0, 100)}
-              {post.title.length > 100 ? '…' : ''}
-            </a>
-          </h2>
-          {post.brief && (
-            <p
-              className={twJoin(
-                post.coverImage ? 'text-base' : 'text-base md:text-lg',
-                'text-slate-700 dark:text-slate-400',
-              )}
-            >
+            <h1 className="mb-2 font-heading text-2xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">
               <a href={postURL}>
-                {post.brief.substring(0, 100)}
-                {post.brief.length > 100 ? '…' : ''}
+                {post.title.substring(0, 100)}
+                {post.title.length > 100 ? '…' : ''}
               </a>
-            </p>
-          )}
+            </h1>
+            {post.brief && (
+              <p
+                className={twJoin(
+                  post.coverImage ? 'text-base' : 'text-base md:text-lg',
+                  'text-slate-700 dark:text-slate-400',
+                )}
+              >
+                <a href={postURL}>
+                  {post.brief.substring(0, 100)}
+                  {post.brief.length > 100 ? '…' : ''}
+                </a>
+              </p>
+            )}
+          </div>
         </div>
       </div>
-      </div >
     );
-});
+  });
 
-return (
-  <div className="blog-more-articles mt-10 mb-20">
-    <h3 className="blog-more-articles-title mb-5 text-center font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-      {true ? 'More articles' : `More Stories by ${post.author.name}`}
-    </h3>
-    <div className="blog-more-articles-wrapper container mx-auto grid grid-flow-row grid-cols-6 px-4 xl:grid-cols-9 xl:gap-6 2xl:px-0">
-      {morePostsRendered}
+  return (
+    <div className="blog-more-articles mt-10 mb-20">
+      <h3 className="blog-more-articles-title mb-5 text-center font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+        {true ? 'More articles' : `More Stories by ${post.author.name}`}
+      </h3>
+      <div className="blog-more-articles-wrapper container mx-auto grid grid-flow-row grid-cols-6 px-4 xl:grid-cols-9 xl:gap-6 2xl:px-0">
+        {morePostsRendered}
+      </div>
     </div>
-  </div>
-);
+  );
 }
 
 

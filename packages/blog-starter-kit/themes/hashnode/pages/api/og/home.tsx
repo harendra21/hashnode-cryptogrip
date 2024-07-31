@@ -69,7 +69,7 @@ export default async function handler(req: NextRequest) {
 				tw={`relative flex h-full w-full p-8 bg-white`}
 			>
 				{/* PERSONAL BLOG The following parent div is for personal blogs */}
-				{/* if the site is set to open in dark mode by default, change text-black to text-white and bg-white to bg-black- */}
+				{/* if the site is set to open in dark mode by default, change text-black to text-white and bg-white to bg-black */}
 				{!isTeam && (
 					<div
 						tw={`flex w-full flex-col items-center justify-center text-black h-full p-10 bg-[${bannerBackground}] relative rounded-xl`}

@@ -46,7 +46,7 @@ const CustomLogo = ({
   const blogTitle = generateBlogTitleWithoutDisplayTitle(publication);
 
   return (
-    <h2 className="blog-main-logo">
+    <h1 className="blog-main-logo">
       <Link
         className={twJoin(
           'blog-logo focus-ring-base flex flex-row items-center', 'focus-ring-colors-base',
@@ -65,7 +65,7 @@ const CustomLogo = ({
           alt={blogTitle}
         />
       </Link>
-    </h2>
+    </h1>
   );
 };
 
