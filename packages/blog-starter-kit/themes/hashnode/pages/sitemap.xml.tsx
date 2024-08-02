@@ -71,7 +71,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 		posts,
 	});
 
-	xml = xml.replaceAll(process.env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST, process.env.PUBLIC_HOST)
+	xml = xml.replaceAll(process.env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST, "www.cryptogrip.co")
 
 	res.setHeader('Cache-Control', 's-maxage=1, stale-while-revalidate');
 	res.setHeader('content-type', 'text/xml');
