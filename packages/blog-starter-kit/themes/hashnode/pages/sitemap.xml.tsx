@@ -39,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 	const initialPageInfo = publication.posts.pageInfo;
 	const fetchPosts = async (after: string | null | undefined) => {
 		const variables = {
-			host: process.env.NEXT_PUBLIC_HASHNODE_PUBLICATION_HOST,
+			host: process.env.PUBLIC_HOST,
 			postsCount: 20,
 			postsAfter: after,
 		};
