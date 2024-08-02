@@ -150,7 +150,7 @@ export default function PostOrPage(props: Props) {
 						authorName={publication.author.name}
 						title={publication.title}
 						imprint={publication.imprint}
-						disableFooterBranding={true}
+						disableFooterBranding={publication.preferences.disableFooterBranding}
 						isTeam={publication.isTeam}
 						logo={publication.preferences.logo}
 						darkMode={publication.preferences.darkMode}
